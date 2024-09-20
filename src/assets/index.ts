@@ -18,5 +18,8 @@ export { default as car8 } from "../assets/car_models/car8.webp";
 export { default as car9 } from "../assets/car_models/car9.webp";
 export { default as car10 } from "../assets/car_models/car10.webp";
 
-export { default as phones } from "../assets/phone.png";
 export { default as herocar } from "../assets/heroCar.png";
+export { default as map } from "../assets/map.png";
+export { default as phone1 } from "../assets/phone1.png";
+export { default as phone2 } from "../assets/phone2.png";
+export { default as circle } from "../assets/circle.png";

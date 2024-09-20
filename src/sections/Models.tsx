@@ -1,9 +1,12 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { cars } from "../data";
 import { BsArrowRight } from "react-icons/bs";
+import { useInView, motion } from "framer-motion";
 
 const Models = () => {
   const [selectedFilter, setSelectedFilter] = useState(1);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: false, margin: "-50px" });
 
   const filters = [
     {
@@ -41,13 +44,13 @@ const Models = () => {
   return (
     <section
       id="cars"
-      className=" flex flex-col items-center  w-full h-screen pt-16"
+      className="snap-start flex flex-col items-center  w-full h-screen pt-16"
     >
       <div className=" text-gray-300 font-semibold pb-2">
         ONLY THE BEST CARS
       </div>
       <div className="text-6xl font-black ">Our Vehicle Fleet</div>
-      <div className="font-medium text-xl py-6 flex flex-col justify-center items-center">
+      <div className="font-medium text-xl py-4 xl:py-6 flex flex-col justify-center items-center">
         <p>
           We provide our customers with the most incredible driving emotion.
         </p>
@@ -69,12 +72,16 @@ const Models = () => {
         ))}
       </div>
 
-      <div className=" w-full flex justify-center flex-wrap space-x-5 ">
-        {filterdCars.slice(0, 7).map((car) => (
-          <div key={car.id} className="  w-64 h-36 mt-5 ">
-            <img
+      <div className=" w-full flex justify-between xl:justify-center flex-wrap xl:space-x-5  scal ">
+        {filterdCars.slice(0, 6).map((car) => (
+          <div key={car.id} className="  w-64 h-28 xl:h-36 mt-5  ">
+            <motion.img
+              ref={ref}
+              initial={{ scale: 0.8 }}
+              animate={isInView ? { scale: 1.05 } : { scale: 1 }}
+              transition={{ duration: 0.3 }}
               src={car.img}
-              className=" w-full h-full object-fill rounded-xl"
+              className=" w-full h-full   object-cover rounded-xl"
             />
           </div>
         ))}

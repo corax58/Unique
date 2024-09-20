@@ -1,3 +1,4 @@
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import {
   carlogo1,
   carlogo2,
@@ -8,8 +9,10 @@ import {
   carlogo7,
   carlogo8,
   herocar,
+  map,
 } from "../assets";
 import { useState } from "react";
+import AnimatedItem from "./AnimatedItem";
 
 const Hero = () => {
   const [selected, setSeleted] = useState(4);
@@ -49,32 +52,45 @@ const Hero = () => {
   ];
 
   return (
-    <section className="  pt-16 w-full h-screen flex flex-col justify-center items-center">
-      <div className=" flex">
-        <div className="  w-1/3 space-y-8">
-          <p className=" text-7xl font-black">Premium Car Rental In New York</p>
-          <div className=" w-4/5">
-            <p className=" text-lg font-medium text-justify ">
+    <section className=" snap-start h-max md:h-screen topPadding w-full flex flex-col  justify-center items-center">
+      <div className=" flex flex-col-reverse md:flex-row  w-full justify-between ">
+        <AnimatedItem
+          className=" w-full md:w-1/3 space-y-4 md:space-y-8"
+          delay={0}
+          y={100}
+        >
+          <p className=" heading ">Premium Car Rental In New York</p>
+          <div className=" w-full md:w-4/5">
+            <p className=" subheading ">
               Don't deny yourself the pleasure of driving the best premium cars
               from around the world here and now
             </p>
           </div>
-        </div>
-        <div className=" w-2/3">
-          <img src={herocar} />
-        </div>
+        </AnimatedItem>
+        <AnimatedItem className="relative w-full md:w-2/3 " delay={0} y={100}>
+          <img
+            src={map}
+            className=" block md:absolute opacity-50 h-full w-full "
+          />
+          <img src={herocar} className=" block md:absolute " />
+        </AnimatedItem>
       </div>
-      <div className="flex items-center w-full space-x-5">
+
+      <AnimatedItem
+        delay={0.1}
+        y={50}
+        className="hidden md:flex mt-10 items-center w-full space-x-5"
+      >
         <button
-          className="w-10 h-10 rounded-full  border-2 text-xl "
+          className="p-2 rounded-full  border-2 text-xl "
           onClick={() => {
             if (selected == 1) setSeleted(8);
             else setSeleted(selected - 1);
           }}
         >
-          {"<"}
+          <FaArrowLeft />
         </button>
-        <div className="  w-full h-24  flex space-x-10 ">
+        <div className="  w-full h-4 md:h-16 lg:h-24   flex space-x-10 ">
           {carLogos.map((car) => (
             <div
               className={`  w-full px-2 grayscale   py-5 ${
@@ -89,15 +105,15 @@ const Hero = () => {
           ))}
         </div>
         <button
-          className="size-10 rounded-full border-2 text-xl "
+          className="p-2 rounded-full border-2 text-xl "
           onClick={() => {
             if (selected == 8) setSeleted(1);
             else setSeleted(selected + 1);
           }}
         >
-          {">"}
+          <FaArrowRight />
         </button>
-      </div>
+      </AnimatedItem>
     </section>
   );
 };

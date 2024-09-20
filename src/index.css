@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  .heading {
+    @apply text-2xl md:text-4xl  lg:text-5xl xl:text-7xl font-black;
+  }
+  .subheading {
+    @apply text-sm xl:text-lg font-medium text-justify;
+  }
+  .subsubheading {
+    @apply font-bold text-gray-400;
+  }
+  .topPadding {
+    @apply pt-16 md:pt-8 lg:pt-16;
+  }
+}
