@@ -7,7 +7,7 @@
     @apply text-2xl md:text-4xl  lg:text-5xl xl:text-7xl font-black;
   }
   .subheading {
-    @apply text-sm xl:text-lg font-medium text-justify;
+    @apply text-xs xl:text-lg font-medium text-justify;
   }
   .subsubheading {
     @apply font-bold text-gray-400;

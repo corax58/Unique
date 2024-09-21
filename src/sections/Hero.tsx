@@ -52,16 +52,18 @@ const Hero = () => {
   ];
 
   return (
-    <section className=" snap-start h-max md:h-screen topPadding w-full flex flex-col  justify-center items-center">
+    <section className="overflow-clip snap-start h-max md:h-screen topPadding w-full flex flex-col  justify-center items-center">
       <div className=" flex flex-col-reverse md:flex-row  w-full justify-between ">
         <AnimatedItem
           className=" w-full md:w-1/3 space-y-4 md:space-y-8"
           delay={0}
           y={100}
         >
-          <p className=" heading ">Premium Car Rental In New York</p>
+          <p className=" heading text-center md:text-start ">
+            Premium Car Rental In New York
+          </p>
           <div className=" w-full md:w-4/5">
-            <p className=" subheading ">
+            <p className=" subheading  ">
               Don't deny yourself the pleasure of driving the best premium cars
               from around the world here and now
             </p>
@@ -70,9 +72,9 @@ const Hero = () => {
         <AnimatedItem className="relative w-full md:w-2/3 " delay={0} y={100}>
           <img
             src={map}
-            className=" block md:absolute opacity-50 h-full w-full "
+            className=" absolute -z-50 opacity-50 h-full w-full "
           />
-          <img src={herocar} className=" block md:absolute " />
+          <img src={herocar} className="  block md:absolute " />
         </AnimatedItem>
       </div>
 

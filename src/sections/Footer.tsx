@@ -9,8 +9,11 @@ const Footer = () => {
   const isInView = useInView(ref, { once: false, margin: "-50px" });
 
   return (
-    <section id="help" className="snap-start w-full h-screen  py-16">
-      <div className="  h-3/5 w-full card bg-gradient-to-tr from-black to-zinc-900 rounded-3xl shadow-zinc-700 shadow-2xl">
+    <section
+      id="help"
+      className="md:snap-start w-full md:h-screen overflow-clip py-16"
+    >
+      <div className="  h-52 md:h-3/5 w-full card bg-gradient-to-tr from-black to-zinc-900 rounded-3xl shadow-zinc-700 shadow-xl">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -19,14 +22,16 @@ const Footer = () => {
           aria-hidden="true"
         />
         <div className=" absolute   h-full w-full">
-          <div className=" items-center justify-center flex-col flex h-full text-white  space-y-10">
-            <div className="text-5xl  font-bold">Drive with Unique Today</div>
-            <div className="  text-xl">
+          <div className=" z-50 items-center  justify-center flex-col flex h-full text-white space-y-5 md:space-y-10">
+            <div className="heading  text-center z-20">
+              Drive with Unique Today
+            </div>
+            <div className=" z-20  subheading">
               {" "}
               Get the app to explore the world of premium cars
             </div>
             <div>
-              <button className="rounded-full px-8 py-4 text-black font-bold bg-white flex items-center space-x-2 ">
+              <button className=" rounded-full px-4 py-1 md:px-8 md:py-4 text-black font-bold bg-white flex items-center space-x-2 ">
                 <FaApple className=" text-black" size={25} />
 
                 <span className=" text-lg">Download app</span>
@@ -34,8 +39,8 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className=" w-full relative ">
-          <div className=" scale-110 -right-48 absolute">
+        <div className=" w-full relative  z-0">
+          <div className=" scale-110  -right-48 hidden md:block md:absolute">
             <motion.img
               ref={ref}
               initial={{ rotate: "0deg" }}
@@ -47,7 +52,7 @@ const Footer = () => {
               }}
             />
           </div>
-          <div className=" scale-50   -rotate-90 -right-48 absolute">
+          <div className=" scale-[0.4] md:scale-50   -rotate-90 -right-48 absolute">
             <motion.img
               ref={ref}
               initial={{ rotate: "0deg" }}
@@ -61,8 +66,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className=" flex justify-between text-lg font-medium items-end  h-2/5  ">
-        <div className=" flex space-x-8">
+      <div className="  flex flex-col-reverse md:flex-row  justify-between text-lg font-medium md:items-end  mt-16 md:mt-0 h-2/5  ">
+        <div className=" flex flex-col md:flex-row md:space-x-8 space-y-4 md:space-y-0 mt-4 md:mb-0">
           <p>Terms</p>
           <p>Privacy</p>
         </div>
@@ -72,7 +77,7 @@ const Footer = () => {
           <p>Features</p>
           <p>Help</p>
         </div>
-        <div className=" flex space-y-4 flex-col  h-full justify-center">
+        <div className=" flex space-y-4 flex-col mb-4  h-full justify-center">
           <p className=" font-extrabold text-xl">Subscribe to News</p>
           <input
             type="text"

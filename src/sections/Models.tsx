@@ -46,11 +46,9 @@ const Models = () => {
       id="cars"
       className="snap-start flex flex-col items-center  w-full h-screen pt-16"
     >
-      <div className=" text-gray-300 font-semibold pb-2">
-        ONLY THE BEST CARS
-      </div>
-      <div className="text-6xl font-black ">Our Vehicle Fleet</div>
-      <div className="font-medium text-xl py-4 xl:py-6 flex flex-col justify-center items-center">
+      <div className=" subsubheading pb-2">ONLY THE BEST CARS</div>
+      <div className="heading ">Our Vehicle Fleet</div>
+      <div className=" py-4 xl:py-6 flex flex-col  text-center subheading">
         <p>
           We provide our customers with the most incredible driving emotion.
         </p>
@@ -60,7 +58,7 @@ const Models = () => {
         {filters.map((filter) => (
           <button
             key={filter.id}
-            className={`  transition-all duration-500 ease-in-out origin-left  p-1 px-4 rounded-lg font-medium ${
+            className={`  transition-all duration-500 ease-in-out origin-left  p-1 px-2 m-1 md:px-4 rounded-lg font-medium ${
               filter.id == selectedFilter
                 ? " bg-black text-white"
                 : " bg-gray-100 "
@@ -72,9 +70,12 @@ const Models = () => {
         ))}
       </div>
 
-      <div className=" w-full flex justify-between xl:justify-center flex-wrap xl:space-x-5  scal ">
+      <div className="overflow-clip w-full flex justify-between xl:justify-center flex-wrap xl:space-x-5  scal ">
         {filterdCars.slice(0, 6).map((car) => (
-          <div key={car.id} className="  w-64 h-28 xl:h-36 mt-5  ">
+          <div
+            key={car.id}
+            className=" w-20 md:w-44 lg:w-64 h-20 md:h-28 xl:h-36 mt-5  "
+          >
             <motion.img
               ref={ref}
               initial={{ scale: 0.8 }}
@@ -86,7 +87,7 @@ const Models = () => {
           </div>
         ))}
       </div>
-      <button className=" flex items-center rounded-full mt-5 font-bold border py-2 px-6 space-x-2 ">
+      <button className=" flex items-center rounded-full mt-10 md:mt-5 font-bold border py-2 px-6 space-x-2 ">
         <span>{"Show All (83 models)"}</span>
         <BsArrowRight size={18} />
       </button>
