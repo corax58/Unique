@@ -9,10 +9,7 @@ const Footer = () => {
   const isInView = useInView(ref, { once: false, margin: "-50px" });
 
   return (
-    <section
-      id="help"
-      className="md:snap-start w-full md:h-screen overflow-clip py-16"
-    >
+    <section id="help" className="md:snap-start w-full md:h-screen  py-16">
       <div className="  h-52 md:h-3/5 w-full card bg-gradient-to-tr from-black to-zinc-900 rounded-3xl shadow-zinc-700 shadow-xl">
         <svg
           xmlns="http://www.w3.org/2000/svg"

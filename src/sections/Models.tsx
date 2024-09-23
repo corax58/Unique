@@ -70,7 +70,7 @@ const Models = () => {
         ))}
       </div>
 
-      <div className="overflow-clip w-full flex justify-between xl:justify-center flex-wrap xl:space-x-5  scal ">
+      <div className="overflow-clip w-full flex justify-center space-x-5 md:space-x-0 md:justify-between xl:justify-center flex-wrap xl:space-x-5  scal ">
         {filterdCars.slice(0, 6).map((car) => (
           <div
             key={car.id}
