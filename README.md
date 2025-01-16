@@ -1,50 +1,30 @@
-# React + TypeScript + Vite
+# Unique
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Unique** is a modern, visually captivating landing page built with React.js, TypeScript, Vite, and Framer Motion. This project demonstrates the power of Framer Motion in crafting sleek, interactive animations, offering an engaging and seamless user experience. The website is fully mobile-responsive, ensuring accessibility across all devices.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### ✨ **Beautiful Animations**
+- Leverages **Framer Motion** to implement smooth, responsive, and visually appealing animations.
+- Adds life to the interface with dynamic transitions and interactive elements.
 
-## Expanding the ESLint configuration
+### 📱 **Mobile Responsive**
+- Fully optimized for various screen sizes, providing a consistent and polished experience across devices.
+- Ensures seamless usability on both desktop and mobile platforms.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### ⚡ **High-Performance Setup**
+- Built with **Vite** for a fast and optimized development and build process.
+- Guarantees efficient rendering and smooth interactions.
 
-- Configure the top-level `parserOptions` property like this:
+### 🎨 **Modern Design**
+- A clean, professional, and user-friendly design with a focus on aesthetics and usability.
+- Perfectly suited for showcasing animation libraries or serving as a starting point for creative projects.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### 🛠️ **Technologies Used**
+- **React.js**: A robust JavaScript library for building user interfaces.
+- **TypeScript**: Enhances code quality and maintainability with strong typing.
+- **Vite**: Ensures a fast and optimized development environment.
+- **Framer Motion**: Powers the website with smooth animations and transitions.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Live Demo
+Check out the live demo here: [Unique](https://learn-framer-sandy.vercel.app/)
